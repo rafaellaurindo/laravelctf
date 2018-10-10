@@ -10,17 +10,15 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                @auth
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">{{ __('frontend_messages.teams') }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">{{ __('frontend_messages.scoreboard') }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">{{ __('frontend_messages.challenges') }}</a>
-                    </li>
-                @endauth
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{{ __('frontend_messages.teams') }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{{ __('frontend_messages.scoreboard') }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">{{ __('frontend_messages.challenges') }}</a>
+                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -36,6 +34,13 @@
                         @endif
                     </li>
                 @else
+
+                    @if(Auth::user()->is_admin)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/admin') }}">{{ __('Admin') }}</a>
+                        </li>
+                    @endif
+
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
