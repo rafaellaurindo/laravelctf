@@ -17,6 +17,16 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
+/**
+ * User routes
+ */
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/home', 'HomeController@index')->name('home');
+});
+
+/**
+ * Admin routes
+ */
+Route::prefix('admin')->middleware(['admin'])->group(function () {
+    Route::get('/', 'AdminController@index');
 });
