@@ -10,7 +10,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-
+                @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{ __('frontend_messages.teams') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{ __('frontend_messages.scoreboard') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{ __('frontend_messages.challenges') }}</a>
+                    </li>
+                @endauth
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -18,7 +28,7 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('frontend_messages.login') }}</a>
                     </li>
                     <li class="nav-item">
                         @if (Route::has('register'))
@@ -32,10 +42,13 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">
+                                {{ __('frontend_messages.my_profile') }}
+                            </a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                {{ __('frontend_messages.logout') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

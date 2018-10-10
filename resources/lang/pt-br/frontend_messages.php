@@ -19,6 +19,8 @@ return [
 
     // Auth pages
     'register'      => 'Registro',
+    'login'         => 'Login',
+    'logout'        => 'Sair',
     'email_address' => 'E-mail',
     'name'          => 'Nome',
     'password'      => 'Senha',
@@ -32,6 +34,16 @@ return [
     'before_check_your_email'   => 'Antes de prosseguir, verifique seu e-mail em busca de um link de verificação.',
     'if_you_did_not_receive'  => 'Se você não recebeu o email',
     'click_here_to_request_another' => 'clique aqui para solicitar outro',
+
+    // Profile page
+    'edit_profile'  => 'Editar perfil',
+    'my_profile'  => 'Meu perfil',
+    'view_profile'  => 'Ver perfil',
+
+    // Navbar title links
+    'teams' => 'Times',
+    'scoreboard' => 'Placar',
+    'challenges'    => 'Desafios',
 
     // Others
     'send'  => 'Enviar',

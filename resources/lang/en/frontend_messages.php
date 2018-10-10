@@ -19,6 +19,8 @@ return [
 
     // Auth pages
     'register'      => 'Register',
+    'login'         => 'Login',
+    'logout'        => 'Logout',
     'email_address' => 'E-mail',
     'name'          => 'Name',
     'password'      => 'Password',
@@ -32,6 +34,16 @@ return [
     'before_check_your_email'   => 'Before proceeding, please check your email for a verification link.',
     'if_you_did_not_receive'  => 'If you did not receive the email',
     'click_here_to_request_another' => 'click here to request another',
+
+    // Profile page
+    'edit_profile'  => 'Edit profile',
+    'my_profile'  => 'My profile',
+    'view_profile'  => 'View profile',
+
+    // Navbar title links
+    'teams' => 'Teams',
+    'scoreboard' => 'Scoreboard',
+    'challenges'    => 'Challenges',
 
     // Others
     'send'  => 'Send',
