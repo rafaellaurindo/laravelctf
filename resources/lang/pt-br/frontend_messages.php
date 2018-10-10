@@ -26,7 +26,7 @@ return [
     'remember_me'   => 'Lembre de mim',
     'forgot_your_password'  => 'Esqueceu sua senha?',
 
-    // Generals
+    // Others
     'send'  => 'Enviar',
 
 ];

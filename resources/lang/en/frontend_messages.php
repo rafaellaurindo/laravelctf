@@ -26,7 +26,7 @@ return [
     'remember_me'   => 'Remember Me',
     'forgot_your_password'  => 'Forgot Your Password?',
 
-    // Generals
+    // Others
     'send'  => 'Send',
 
 ];
