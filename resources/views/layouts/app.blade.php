@@ -49,7 +49,7 @@
                             </li>
                             <li class="nav-item">
                                 @if (Route::has('register'))
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('frontend_messages.register') }}</a>
                                 @endif
                             </li>
                         @else
