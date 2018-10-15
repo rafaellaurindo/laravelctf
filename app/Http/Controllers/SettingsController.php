@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Setting;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class SettingsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        return view('admin.settings');
     }
 
     /**
@@ -40,10 +41,10 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Setting  $settings
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Setting $settings)
     {
         //
     }
@@ -51,10 +52,10 @@ class AdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Setting  $settings
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Setting $settings)
     {
         //
     }
@@ -63,21 +64,28 @@ class AdminController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        /**
+         * Update the settings
+         */
+        $settings = Setting::first() ?? new Setting();
+
+        $settings->name  =  $request->input('name');
+        $settings->save();
+
+        return redirect()->back();
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Setting  $settings
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Setting $settings)
     {
         //
     }

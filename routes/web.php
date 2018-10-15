@@ -29,4 +29,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
  */
 Route::prefix('admin')->middleware(['admin'])->group(function () {
     Route::get('/', 'AdminController@index');
+    Route::get('/settings', 'SettingsController@index')->name('admin.settings');
+    Route::post('/settings', 'SettingsController@update')->name('admin.settings.update');
 });
