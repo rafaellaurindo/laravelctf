@@ -26,7 +26,11 @@
 <body>
     <div id="app">
 
-        @include('includes.navbar')
+        @if(Request::is('admin' . '*'))
+            @include('includes.navbar-admin')
+        @else
+            @include('includes.navbar-user')
+        @endif
 
         <main class="py-4">
             @yield('content')
