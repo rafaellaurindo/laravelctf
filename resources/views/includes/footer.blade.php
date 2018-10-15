@@ -1,1 +1,1 @@
-Powered by {{ config('app.name') }}.
+Powered by {{ app('APP_NAME') }}.
