@@ -15,7 +15,7 @@ class GetAppNameServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->app->singleton('APP_NAME', function(){
-            return Setting::first()->name ?? config('name');
+            return Setting::first()->name ?? config('app.name');
         });
         
     }
