@@ -32,7 +32,13 @@
             @include('includes.navbar-user')
         @endif
 
-        <main class="py-4">
+        <header>
+            <div class="jumbotron text-center">
+                <h1>@yield('title')</h1>
+            </div>
+        </header>
+
+        <main class="pb-4">
             @yield('content')
         </main>
 
